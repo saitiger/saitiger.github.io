@@ -1,8 +1,10 @@
+
 import { Github, Linkedin, LampCeiling, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
+  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Hackathons", href: "#hackathons" },
   { label: "Work Experience", href: "#work" },
