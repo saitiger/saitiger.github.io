@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, LampCeiling } from "lucide-react";
 import { useEffect, useState } from "react";
 import SubstackIcon from "./SubstackIcon";
@@ -76,9 +77,9 @@ const Navbar = () => {
           onClick={toggleTheme}
         >
           <LampCeiling
-            className={`w-6 h-6 hover:scale-110 transition-all duration-300 ${
+            className={`w-6 h-6 hover:scale-110 transition-all duration-500 ${
               theme === "light"
-                ? "text-yellow-400 fill-yellow-300/50"
+                ? "translate-y-2 text-yellow-400 fill-yellow-300/50"
                 : "text-muted-foreground hover:text-primary"
             }`}
           />
