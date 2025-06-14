@@ -18,7 +18,7 @@ const AboutSection = () => (
           </p>
           <p className="text-xl mb-6">
             When I enrolled in the computer science program, I got to know more about the "Sexiest job of the 21st century" and started exploring datasets. And yes, my first project was based on the Titanic Dataset! 
-            Since then, I’ve worked across industries: building models and ETL pipelines, improving marketing ROI by 30%, and crafting real-time dashboards that helped teams move faster and smarter.
+            Since then, I’ve worked across industries: building <strong>models</strong> and <strong>ETL</strong> pipelines, improving marketing ROI by <strong>30%</strong>, and crafting real-time <strong>dashboards</strong> that helped teams move faster and smarter.
           </p>
           <p className="text-lg mb-6">
             At my core, I <strong>humanize</strong> data through storytelling and practical solutions.
