@@ -1,6 +1,6 @@
 
-import { Github, Linkedin } from "lucide-react";
-import SubstackIcon from "./SubstackIcon";
+import { Github, Linkedin, FileText } from "lucide-react";
+
 const Footer = () => (
   <footer id="contact" className="w-full mt-16 py-8 border-t bg-background/80">
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 px-4">
@@ -16,7 +16,7 @@ const Footer = () => (
           <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition" />
         </a>
         <a href="https://sairaina.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack">
-          <SubstackIcon className="w-5 h-5 text-muted-foreground hover:text-primary transition" />
+          <FileText className="w-5 h-5 text-muted-foreground hover:text-primary transition" />
         </a>
       </div>
     </div>

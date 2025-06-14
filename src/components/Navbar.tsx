@@ -1,5 +1,4 @@
-
-import { Github, Linkedin, LampCeiling } from "lucide-react";
+import { Github, Linkedin, LampCeiling, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import SubstackIcon from "./SubstackIcon";
 import { Link, useLocation } from "react-router-dom";
@@ -68,7 +67,7 @@ const Navbar = () => {
           <Linkedin className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
         </a>
         <a href="https://sairaina.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack">
-          <SubstackIcon className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
+          <FileText className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
         </a>
         <button
           type="button"
