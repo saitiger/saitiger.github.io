@@ -11,8 +11,8 @@ const HeroSection = () => (
       <div className="text-center lg:text-left max-w-xl">
         <TypewriterText />
         <p className="text-xl text-muted-foreground font-medium mt-6">
-          Hello, I am Sai. Data Scientist with experience in deploying machine learning models, marketing analytics, and building scalable pipelines. 
-          These days, along with programming, I study about startups and businesses and vibe code on weekends side projects that solve pain points for me !
+          Hi, I'm Sai 👋, a Data Scientist passionate about turning data into decisions.
+          I specialize in deploying machine learning models, building scalable data pipelines, and delivering insights that drive marketing performance. Lately, I've been diving into the world of startups and product strategy, exploring what makes businesses tick. On weekends, you'll find me vibing with code, prototyping side projects that solve pain points in my life.
         </p>
       </div>
     </div>
