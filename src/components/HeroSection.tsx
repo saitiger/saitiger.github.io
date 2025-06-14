@@ -12,7 +12,7 @@ const HeroSection = () => <section className="flex flex-col lg:flex-row items-ce
     </div>
     {/* Avatar */}
     <div className="flex justify-center flex-1">
-      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=facearea&facepad=2" alt="Profile" className="w-56 h-56 rounded-full object-cover border-4 border-primary/30 shadow-lg" />
+      <img alt="Profile" className="w-56 h-56 rounded-full object-cover border-4 border-primary/30 shadow-lg" src="/lovable-uploads/0daf8daf-c316-4c1c-a207-55351a042c9d.png" />
     </div>
   </section>;
 export default HeroSection;
