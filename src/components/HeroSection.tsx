@@ -1,4 +1,6 @@
 
+import TypewriterText from "./TypewriterText";
+
 const HeroSection = () => (
   <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-12 py-16 max-w-7xl mx-auto w-full">
     {/* Text Section */}
@@ -6,10 +8,13 @@ const HeroSection = () => (
       <h1 className="font-playfair text-5xl md:text-6xl font-bold leading-tight text-primary text-center lg:text-left">
         Sai Tiger Raina
       </h1>
-      <p className="text-xl text-muted-foreground font-medium text-center lg:text-left max-w-xl">
-        Data Science Student passionate about machine learning, analytics, and building impactful data solutions. <br />
-        Welcome to my portfolio!
-      </p>
+      <div className="text-center lg:text-left max-w-xl">
+        <TypewriterText />
+        <p className="text-xl text-muted-foreground font-medium mt-2">
+          passionate about machine learning, analytics, and building impactful data solutions. <br />
+          Welcome to my portfolio!
+        </p>
+      </div>
     </div>
     {/* Avatar */}
     <div className="flex justify-center flex-1">
