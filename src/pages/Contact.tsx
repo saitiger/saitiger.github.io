@@ -1,8 +1,9 @@
-
-import { Mail, User, Send, Linkedin } from "lucide-react";
+import { Mail, User, Send, Linkedin, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SubstackIcon from "@/components/SubstackIcon";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/sonner";
 
 const socialLinks = [
   {
@@ -31,6 +32,31 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Please fill out all fields.");
+      return;
+    }
+
+    setLoading(true);
+    const { error } = await supabase
+      .from("contact_messages")
+      .insert([form]);
+
+    setLoading(false);
+
+    if (error) {
+      toast.error("Failed to send message. Please try again.");
+      console.error("Error inserting message:", error);
+    } else {
+      toast.success("Your message has been sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background pt-12 px-2">
@@ -43,7 +69,7 @@ const Contact = () => {
         </p>
         <form
           className="bg-background border border-green-500/60 shadow-md rounded-xl p-6 mb-3 flex flex-col gap-5"
-          onSubmit={e => e.preventDefault()}
+          onSubmit={handleSubmit}
         >
           <div className="flex items-center border border-green-500/30 rounded-lg px-3 bg-background/40">
             <User className="h-5 w-5 text-green-400 mr-2" />
@@ -76,10 +102,20 @@ const Contact = () => {
             />
           </div>
           <button
-            className="self-end flex items-center gap-2 mt-2 px-6 py-2 border border-green-400 rounded-lg text-green-400 font-semibold bg-transparent hover:bg-green-400/10 transition"
+            className="self-end flex items-center gap-2 mt-2 px-6 py-2 border border-green-400 rounded-lg text-green-400 font-semibold bg-transparent hover:bg-green-400/10 transition disabled:opacity-50 disabled:cursor-not-allowed"
             type="submit"
+            disabled={loading}
           >
-            Send Message <Send className="w-4 h-4" />
+            {loading ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                Send Message <Send className="w-4 h-4" />
+              </>
+            )}
           </button>
         </form>
 
