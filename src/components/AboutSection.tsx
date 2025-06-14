@@ -1,4 +1,3 @@
-
 const AboutSection = () => (
   <section id="about" className="py-24 bg-background">
     <div className="max-w-7xl mx-auto px-4">
@@ -6,9 +5,9 @@ const AboutSection = () => (
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="flex-shrink-0">
           <img
-            alt="Profile"
-            className="w-48 h-48 rounded-full object-cover border-4 border-primary/30 shadow-lg"
-            src="/lovable-uploads/0daf8daf-c316-4c1c-a207-55351a042c9d.png"
+            alt="Brain GIF"
+            className="w-64 h-64 rounded-lg object-cover shadow-lg"
+            src="https://i.gifer.com/75ez.gif"
           />
         </div>
         <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">

@@ -15,12 +15,12 @@ const HeroSection = () => (
         </p>
       </div>
     </div>
-    {/* GIF */}
+    {/* Avatar */}
     <div className="flex justify-center flex-1">
       <img
-        alt="Brain GIF"
-        className="w-64 h-64 rounded-lg object-cover shadow-lg"
-        src="https://i.gifer.com/75ez.gif"
+        alt="Profile"
+        className="w-56 h-56 rounded-full object-cover border-4 border-primary/30 shadow-lg"
+        src="/lovable-uploads/0daf8daf-c316-4c1c-a207-55351a042c9d.png"
       />
     </div>
   </section>
