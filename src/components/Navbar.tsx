@@ -20,7 +20,11 @@ const getSystemTheme = (): "dark" | "light" => {
 
 const Navbar = () => {
   // Default dark mode
-  const [theme, setTheme] = useState<"dark" | "light">(() => getSystemTheme());
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
+    // Check localStorage first, then system preference
+    const saved = localStorage.getItem("theme");
+    return saved === "light" || saved === "dark" ? saved : getSystemTheme();
+  });
 
   useEffect(() => {
     document.documentElement.classList.remove("dark", "light");
@@ -29,12 +33,6 @@ const Navbar = () => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  useEffect(() => {
-    // On mount, check for saved user theme or system
-    const saved = localStorage.getItem("theme");
-    setTheme(saved === "light" || saved === "dark" ? saved : getSystemTheme());
-  }, []);
-
   // Toggle theme function
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
@@ -42,7 +40,9 @@ const Navbar = () => {
 
   return (
     <nav className="w-full sticky top-0 z-30 bg-background/80 border-b flex items-center justify-between px-12 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="text-2xl font-playfair tracking-tight">Sai Tiger Raina</div>
+      <Link to="/" className="text-2xl font-playfair tracking-tight hover:text-primary transition-colors">
+        Sai Tiger Raina
+      </Link>
       <div className="flex gap-7 items-center">
         {NAV_ITEMS.map(item =>
           item.label === "Contact" ? (
@@ -56,9 +56,13 @@ const Navbar = () => {
               {item.label}
             </Link>
           ) : (
-            <a key={item.label} href={item.href} className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5">
+            <Link
+              to={`/${item.href}`}
+              key={item.label}
+              className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5"
+            >
               {item.label}
-            </a>
+            </Link>
           )
         )}
         <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
