@@ -1,8 +1,8 @@
-
 import { Github, Linkedin, Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 import SubstackIcon from "./SubstackIcon";
 import { Switch } from "@/components/ui/switch";
+import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
   { label: "Projects", href: "#projects" },
@@ -38,15 +38,29 @@ const Navbar = () => {
   // Toggle theme function
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
+  const location = useLocation();
+
   return (
     <nav className="w-full sticky top-0 z-30 bg-background/80 border-b flex items-center justify-between px-12 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="text-2xl font-playfair tracking-tight">Sai Tiger Raina</div>
       <div className="flex gap-7 items-center">
-        {NAV_ITEMS.map(item => (
-          <a key={item.label} href={item.href} className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5">
-            {item.label}
-          </a>
-        ))}
+        {NAV_ITEMS.map(item =>
+          item.label === "Contact" ? (
+            <Link
+              to="/contact"
+              key={item.label}
+              className={`transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5 ${
+                location.pathname === "/contact" ? "text-primary" : ""
+              }`}
+            >
+              {item.label}
+            </Link>
+          ) : (
+            <a key={item.label} href={item.href} className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5">
+              {item.label}
+            </a>
+          )
+        )}
         <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <Github className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
         </a>
@@ -67,9 +81,7 @@ const Navbar = () => {
             onCheckedChange={toggleTheme}
             className="align-middle"
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {/* Hide the icon inside, just render next to switch */}
-          </Switch>
+          />
           <span className="sr-only">{theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}</span>
           {theme === "dark" ? (
             <Moon className="inline ml-2 w-4 h-4 text-primary align-middle" />
