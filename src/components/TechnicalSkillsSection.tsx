@@ -1,6 +1,6 @@
 
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
-import { Figma, Git } from "lucide-react";
+import { Figma, GitBranch } from "lucide-react";
 
 const SKILLS = [
   { name: "Python", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&crop=center" },
@@ -15,7 +15,7 @@ const SKILLS = [
   { name: "GCP", logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&crop=center" },
   { name: "Docker", logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=64&h=64&fit=crop&crop=center" },
   { name: "Figma", icon: Figma },
-  { name: "Git", icon: Git },
+  { name: "Git", icon: GitBranch },
 ];
 
 const TechnicalSkillsSection = () => (
