@@ -40,7 +40,15 @@ const Navbar = () => {
 
   return (
     <nav className="w-full sticky top-0 z-30 bg-background/80 border-b flex items-center justify-between px-12 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <Link to="/" className="text-2xl font-playfair tracking-tight hover:text-primary transition-colors">
+      <Link
+        to="/"
+        className="text-2xl font-playfair tracking-tight hover:text-primary transition-colors"
+        onClick={() => {
+          if (location.pathname === "/") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }}
+      >
         Sai Tiger Raina
       </Link>
       <div className="flex gap-7 items-center">
