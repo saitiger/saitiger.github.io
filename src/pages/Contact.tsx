@@ -10,19 +10,19 @@ const socialLinks = [
     label: "Email",
     value: "sai.raina@gmail.com",
     href: "mailto:sai.raina@gmail.com",
-    icon: <Mail className="w-5 h-5 text-green-400" />,
+    icon: <Mail className="w-5 h-5 text-primary" />,
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/saitigerraina",
     href: "https://www.linkedin.com/in/saitigerraina/",
-    icon: <Linkedin className="w-5 h-5 text-green-400" />,
+    icon: <Linkedin className="w-5 h-5 text-primary" />,
   },
   {
     label: "Substack",
     value: "sairaina.substack.com",
     href: "https://sairaina.substack.com/",
-    icon: <FileText className="w-5 h-5 text-green-400" />,
+    icon: <FileText className="w-5 h-5 text-primary" />,
   },
 ];
 
@@ -61,18 +61,18 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background pt-12 px-2">
       <div className="max-w-xl w-full">
-        <h1 className="text-4xl font-playfair font-bold text-center mb-2 text-green-400">Get In Touch</h1>
-        <div className="w-16 h-1 mx-auto mb-6 bg-gradient-to-r from-green-400 via-green-300 to-green-400 rounded" />
+        <h1 className="text-4xl font-playfair font-bold text-center mb-2 text-primary">Get In Touch</h1>
+        <div className="w-16 h-1 mx-auto mb-6 bg-gradient-to-r from-primary via-primary/70 to-primary rounded" />
         <p className="mb-8 text-center text-muted-foreground text-lg font-medium">
-          I’m currently exploring exciting opportunities and always open to connecting with like-minded professionals. 
-          If you have a role, project, or collaboration in mind, I’d love to hear from you!
+          I'm currently exploring exciting opportunities and always open to connecting with like-minded professionals. 
+          If you have a role, project, or collaboration in mind, I'd love to hear from you!
         </p>
         <form
-          className="bg-background border border-green-500/60 shadow-md rounded-xl p-6 mb-3 flex flex-col gap-5"
+          className="bg-background border border-border shadow-md rounded-xl p-6 mb-3 flex flex-col gap-5"
           onSubmit={handleSubmit}
         >
-          <div className="flex items-center border border-green-500/30 rounded-lg px-3 bg-background/40">
-            <User className="h-5 w-5 text-green-400 mr-2" />
+          <div className="flex items-center border border-input rounded-lg px-3 bg-background">
+            <User className="h-5 w-5 text-muted-foreground mr-2" />
             <input
               type="text"
               placeholder="Your Name"
@@ -81,8 +81,8 @@ const Contact = () => {
               onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
             />
           </div>
-          <div className="flex items-center border border-green-500/30 rounded-lg px-3 bg-background/40">
-            <Mail className="h-5 w-5 text-green-400 mr-2" />
+          <div className="flex items-center border border-input rounded-lg px-3 bg-background">
+            <Mail className="h-5 w-5 text-muted-foreground mr-2" />
             <input
               type="email"
               placeholder="Your Email"
@@ -91,8 +91,8 @@ const Contact = () => {
               onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
             />
           </div>
-          <div className="flex items-start border border-green-500/30 rounded-lg px-3 bg-background/40">
-            <User className="h-5 w-5 text-green-400 mr-2 mt-3" />
+          <div className="flex items-start border border-input rounded-lg px-3 bg-background">
+            <User className="h-5 w-5 text-muted-foreground mr-2 mt-3" />
             <textarea
               placeholder="Your Message"
               rows={4}
@@ -102,7 +102,7 @@ const Contact = () => {
             />
           </div>
           <button
-            className="self-end flex items-center gap-2 mt-2 px-6 py-2 border border-green-400 rounded-lg text-green-400 font-semibold bg-transparent hover:bg-green-400/10 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="self-end flex items-center gap-2 mt-2 px-6 py-2 border border-primary rounded-lg text-primary font-semibold bg-transparent hover:bg-primary/10 transition disabled:opacity-50 disabled:cursor-not-allowed"
             type="submit"
             disabled={loading}
           >
@@ -126,7 +126,7 @@ const Contact = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-green-400 hover:underline text-base"
+              className="flex items-center gap-2 text-primary hover:underline text-base"
             >
               {link.icon}
               <span>{link.value}</span>
