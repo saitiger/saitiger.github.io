@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 
 const phrases = [
   "Data Scientist",
-  "Data-Driven Analytics", 
-  "AI Explorer"
+  "AI Explorer", 
+  "Product Experience & Experimentation"
 ];
 
 const TypewriterText = () => {
@@ -43,9 +43,9 @@ const TypewriterText = () => {
   }, [charIndex, isDeleting, currentPhraseIndex]);
 
   return (
-    <span className="text-xl text-muted-foreground font-medium">
+    <span className="text-xl font-medium text-amber-600 dark:text-yellow-400">
       {currentText}
-      <span className="animate-pulse text-primary">|</span>
+      <span className="animate-pulse text-amber-600 dark:text-yellow-400 font-bold">|</span>
     </span>
   );
 };
