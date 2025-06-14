@@ -1,8 +1,9 @@
+
 import { Github, Linkedin } from "lucide-react";
 const Footer = () => <footer id="contact" className="w-full mt-16 py-8 border-t bg-background/80">
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 px-4">
       <span className="text-muted-foreground text-sm">
-        &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+        &copy; {new Date().getFullYear()} Sai Tiger Raina. All rights reserved.
       </span>
       <div className="flex items-center gap-6">
         <a href="mailto:your.email@example.com" className="text-primary hover:underline text-sm">sai.raina@gmail.com</a>
