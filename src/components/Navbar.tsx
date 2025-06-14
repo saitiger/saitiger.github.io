@@ -1,4 +1,5 @@
-import { Github, Linkedin } from "lucide-react";
+
+import { Github, Linkedin, Mail } from "lucide-react";
 const NAV_ITEMS = [{
   label: "Projects",
   href: "#projects"
@@ -18,11 +19,14 @@ const Navbar = () => <nav className="w-full sticky top-0 z-30 bg-background/80 b
       {NAV_ITEMS.map(item => <a key={item.label} href={item.href} className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5">
           {item.label}
         </a>)}
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <Github className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
       </a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/saitigerraina/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <Linkedin className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
+      </a>
+      <a href="https://sairaina.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack">
+        <Mail className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
       </a>
     </div>
   </nav>;
