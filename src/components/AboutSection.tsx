@@ -21,7 +21,7 @@ const AboutSection = () => (
             Since then, I’ve worked across industries: building models and ETL pipelines, improving marketing ROI by 30%, and crafting real-time dashboards that helped teams move faster and smarter.
           </p>
           <p className="text-lg mb-6">
-            At my core, I humanize data through storytelling and practical solutions.
+            At my core, I <strong>humanize</strong> data through storytelling and practical solutions.
           </p>
           <p className="text-lg mb-6">
             Outside of work, I’m usually reading about startups, exploring business strategy, or building side projects that solve my own everyday problems. There’s something therapeutic about turning a weekend frustration into a working app. When I’m not coding, you’ll find me hiking or watching sports.
