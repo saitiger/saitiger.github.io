@@ -1,6 +1,6 @@
-import { Mail, User, Send, Linkedin, Loader2 } from "lucide-react";
+
+import { Mail, User, Send, Linkedin, Loader2, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import SubstackIcon from "@/components/SubstackIcon";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/sonner";
@@ -22,7 +22,7 @@ const socialLinks = [
     label: "Substack",
     value: "sairaina.substack.com",
     href: "https://sairaina.substack.com/",
-    icon: <SubstackIcon className="w-5 h-5 text-green-400" />,
+    icon: <FileText className="w-5 h-5 text-green-400" />,
   },
 ];
 

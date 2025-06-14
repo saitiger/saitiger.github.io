@@ -1,6 +1,5 @@
 import { Github, Linkedin, LampCeiling, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
-import SubstackIcon from "./SubstackIcon";
 import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
