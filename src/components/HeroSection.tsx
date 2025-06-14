@@ -11,8 +11,7 @@ const HeroSection = () => (
       <div className="text-center lg:text-left max-w-xl">
         <TypewriterText />
         <p className="text-xl text-muted-foreground font-medium mt-2">
-          passionate about machine learning, analytics, and building impactful data solutions. <br />
-          Welcome to my portfolio!
+          I am excited about solving tough problems and challenges that not only solve pain points but also have a business impact!
         </p>
       </div>
     </div>
