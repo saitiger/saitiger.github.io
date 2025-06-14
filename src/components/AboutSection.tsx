@@ -1,3 +1,4 @@
+
 const AboutSection = () => (
   <section id="about" className="py-24 bg-background">
     <div className="max-w-7xl mx-auto px-4">
@@ -22,8 +23,11 @@ const AboutSection = () => (
           <p className="text-lg mb-6">
             At my core, I humanize data through storytelling and practical solutions.
           </p>
+          <p className="text-lg mb-6">
+            Outside of work, I’m usually reading about startups, exploring business strategy, or building side projects that solve my own everyday problems. There’s something therapeutic about turning a weekend frustration into a working app. When I’m not coding, you’ll find me hiking or watching sports.
+          </p>
           <p className="text-lg">
-            Outside of work, I’m usually reading about startups, exploring business strategy, or building side projects that solve my own everyday problems. There’s something therapeutic about turning a weekend frustration into a working app. When I’m not coding, you’ll find me hiking or watching sports. P.S. This means watching classics when nothing's live!
+            P.S. This means watching classics when nothing's live!
           </p>
         </div>
       </div>
