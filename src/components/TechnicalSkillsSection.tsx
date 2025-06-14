@@ -1,6 +1,5 @@
 
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
-import { Figma, GitBranch } from "lucide-react";
 
 const SKILLS = [
   { name: "Python", logo: "/lovable-uploads/1edf1431-14b9-4c56-b9c4-255fc40a2d27.png" },
@@ -11,11 +10,11 @@ const SKILLS = [
   { name: "PowerBI", logo: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
   { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
   { name: "Spark", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" },
-  { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+  { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
   { name: "GCP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
   { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-  { name: "Figma", icon: Figma },
-  { name: "Git", icon: GitBranch },
+  { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+  { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
 ];
 
 const TechnicalSkillsSection = () => (
@@ -27,15 +26,11 @@ const TechnicalSkillsSection = () => (
           <HoverCard key={skill.name}>
             <HoverCardTrigger asChild>
               <div className="flex flex-col items-center cursor-pointer group">
-                {skill.icon ? (
-                  <skill.icon className="w-12 h-12 text-primary group-hover:text-primary/80 transition-colors" aria-label={skill.name} />
-                ) : (
-                  <img 
-                    src={skill.logo} 
-                    alt={skill.name}
-                    className="w-12 h-12 rounded-lg object-contain group-hover:opacity-80 transition-opacity"
-                  />
-                )}
+                <img 
+                  src={skill.logo} 
+                  alt={skill.name}
+                  className="w-12 h-12 rounded-lg object-contain group-hover:opacity-80 transition-opacity"
+                />
               </div>
             </HoverCardTrigger>
             <HoverCardContent className="text-center">{skill.name}</HoverCardContent>
