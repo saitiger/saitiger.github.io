@@ -1,20 +1,70 @@
 
-import { Projector } from "lucide-react";
+import { Projector, Link as LinkIcon } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const HACKATHONS = [
   {
-    name: "DataSprint Hackathon 2024",
-    role: "Team Lead, Analytics",
-    outcome: "🏆 2nd Place out of 50 teams",
-    description: "Led a team of 4 to build a real-time fraud detection app in 36 hours; integrated data APIs and built ML pipeline.",
-    year: "2024"
+    name: "Reality Shift",
+    outcome: "🏆 1st Place & $650 Prize",
+    summary: "Made an MVP for a VR-based speech therapy app for children with ASD.",
+    details: [
+      "Created a pitch deck, researched competitors and conducted market analysis."
+    ],
+    links: [
+      { name: "GitHub", url: "https://github.com/saitiger/Talk-Through" }
+    ]
+  },
+    {
+    name: "GRIDS Mindspark 2.0",
+    outcome: "🏆 1st Place & Featured on KNIME Blog",
+    summary: "Developed a platform for matching PhD students with professors using research interests.",
+    details: [
+      "Scraped academic directories and websites for research data.",
+      "Used OpenAI API for text embeddings and similarity-based recommendations.",
+      "Conducted user interviews and competitor analysis to gauge product-market fit.",
+      "Analyzed market trends to uncover product needs."
+    ],
+    links: [
+      { name: "KNIME Blog", url: "https://www.knime.com/blog/students-push-social-good-projects-at-hackathon" },
+      { name: "Presentation", url: "https://www.canva.com/design/DAFu1D4kBig/lOg2BDeHCCCVc0ADfL2HWg/edit" },
+      { name: "GitHub", url: "https://github.com/saitiger/Text2PhD" }
+    ]
   },
   {
-    name: "AI4Good Challenge",
-    role: "ML Engineer",
-    outcome: "Top 10 Finalist",
-    description: "Developed NLP models for disaster tweet classification and visualized results in an interactive dashboard.",
-    year: "2023"
+    name: "Viterbi - Greif Sustainability Innovation Challenge",
+    outcome: "🏆 'Biggest Swing' Award & $1000 Prize",
+    summary: "Developed a conversational bot for Life Cycle Analysis of products.",
+    details: [
+      "Built PowerBI dashboards to identify material trading locations and track manufacturing emissions.",
+      "Conducted market analysis and devised a 3-year strategic plan for product launch."
+    ],
+    links: [
+      { name: "GitHub", url: "https://github.com/saitiger/Green-Cycle" }
+    ]
+  },
+  {
+    name: "Min Family Challenge",
+    outcome: "🏅 Top 5 Finalist (out of 100+ teams)",
+    summary: "Participated in a highly competitive innovation challenge focused on family well-being.",
+    details: [],
+    links: [
+      { name: "Video", url: "https://www.youtube.com/watch?v=XKZfvOl_mBw" }
+    ]
+  },
+  {
+    name: "Code & Conquer",
+    outcome: "🏅 Top 10 & Honourable Mention",
+    summary: "Developed Saathi.AI, an innovative AI-powered companion.",
+    details: [],
+    links: [
+      { name: "Presentation", url: "https://pitch.com/v/saathiai-qmaery" },
+      { name: "Video", url: "https://www.youtube.com/watch?v=9vqTooqTjwU" }
+    ]
   }
 ];
 
@@ -22,24 +72,53 @@ const HackathonsSection = () => (
   <section id="hackathons" className="py-20">
     <div className="max-w-6xl mx-auto px-4">
       <h2 className="font-playfair text-3xl mb-8 text-primary text-center">Hackathon Experience</h2>
-      <div className="flex flex-col gap-8">
-        {HACKATHONS.map((hack) => (
-          <div
+      <Accordion type="multiple" className="w-full space-y-4">
+        {HACKATHONS.map((hack, index) => (
+          <AccordionItem
+            value={`item-${index}`}
             key={hack.name}
-            className="relative flex flex-col md:flex-row gap-7 bg-card rounded-lg shadow border border-border p-6 hover:shadow-lg transition"
+            className="bg-card border border-border rounded-lg shadow-sm hover:shadow-lg transition-shadow border-b-0"
           >
-            <Projector className="w-10 h-10 text-primary flex-shrink-0 mb-2 md:mb-0" />
-            <div>
-              <div className="flex gap-4 items-center">
-                <span className="text-lg font-semibold">{hack.name}</span>
-                <span className="text-xs bg-muted px-2 py-0.5 rounded">{hack.year}</span>
+            <AccordionTrigger className="p-6 text-left hover:no-underline">
+              <div className="flex gap-6 items-start w-full">
+                <Projector className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
+                <div className="flex flex-col gap-1 text-left">
+                  <span className="text-lg font-semibold">{hack.name}</span>
+                  <div className="text-sm text-muted-foreground font-medium">{hack.outcome}</div>
+                  <p className="text-base text-muted-foreground mt-2">{hack.summary}</p>
+                </div>
               </div>
-              <div className="text-sm text-muted-foreground mb-2">{hack.role} &mdash; <span className="font-medium">{hack.outcome}</span></div>
-              <div className="text-base">{hack.description}</div>
-            </div>
-          </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6 pt-0">
+              <div className="pl-[64px]">
+                {hack.details.length > 0 && (
+                  <ul className="list-disc pl-5 space-y-2 text-muted-foreground mb-4">
+                    {hack.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                )}
+                {hack.links.length > 0 && (
+                  <div className="flex flex-wrap gap-x-6 gap-y-2">
+                    {hack.links.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-primary underline-offset-4 hover:underline text-sm font-medium"
+                      >
+                        <LinkIcon className="w-3.5 h-3.5" />
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
     </div>
   </section>
 );
