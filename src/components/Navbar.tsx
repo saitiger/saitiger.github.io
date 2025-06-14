@@ -1,7 +1,6 @@
-import { Github, Linkedin, Sun, Moon } from "lucide-react";
+import { Github, Linkedin, LampCeiling } from "lucide-react";
 import { useEffect, useState } from "react";
 import SubstackIcon from "./SubstackIcon";
-import { Switch } from "@/components/ui/switch";
 import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
@@ -72,22 +71,18 @@ const Navbar = () => {
         </a>
         <button
           type="button"
-          aria-label="Toggle dark mode"
-          className="ml-2 focus:outline-none focus-visible:ring"
+          aria-label="Toggle theme"
+          className="ml-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-full"
           onClick={toggleTheme}
         >
-          <Switch
-            checked={theme === "dark"}
-            onCheckedChange={toggleTheme}
-            className="align-middle"
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          <LampCeiling
+            className={`w-6 h-6 hover:scale-110 transition-all duration-300 ${
+              theme === "light"
+                ? "text-yellow-400 fill-yellow-300/50"
+                : "text-muted-foreground hover:text-primary"
+            }`}
           />
-          <span className="sr-only">{theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}</span>
-          {theme === "dark" ? (
-            <Moon className="inline ml-2 w-4 h-4 text-primary align-middle" />
-          ) : (
-            <Sun className="inline ml-2 w-4 h-4 text-primary align-middle" />
-          )}
+          <span className="sr-only">Toggle theme</span>
         </button>
       </div>
     </nav>
