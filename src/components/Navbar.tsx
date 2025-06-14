@@ -1,33 +1,85 @@
 
-import { Github, Linkedin, Mail } from "lucide-react";
-const NAV_ITEMS = [{
-  label: "Projects",
-  href: "#projects"
-}, {
-  label: "Hackathons",
-  href: "#hackathons"
-}, {
-  label: "Work Experience",
-  href: "#work"
-}, {
-  label: "Contact",
-  href: "#contact"
-}];
-const Navbar = () => <nav className="w-full sticky top-0 z-30 bg-background/80 border-b flex items-center justify-between px-12 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-    <div className="text-2xl font-playfair tracking-tight">Sai Tiger Raina</div>
-    <div className="flex gap-7 items-center">
-      {NAV_ITEMS.map(item => <a key={item.label} href={item.href} className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5">
-          {item.label}
-        </a>)}
-      <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <Github className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
-      </a>
-      <a href="https://www.linkedin.com/in/saitigerraina/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <Linkedin className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
-      </a>
-      <a href="https://sairaina.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack">
-        <Mail className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
-      </a>
-    </div>
-  </nav>;
+import { Github, Linkedin, Sun, Moon } from "lucide-react";
+import { useEffect, useState } from "react";
+import SubstackIcon from "./SubstackIcon";
+import { Switch } from "@/components/ui/switch";
+
+const NAV_ITEMS = [
+  { label: "Projects", href: "#projects" },
+  { label: "Hackathons", href: "#hackathons" },
+  { label: "Work Experience", href: "#work" },
+  { label: "Contact", href: "#contact" },
+];
+
+const getSystemTheme = (): "dark" | "light" => {
+  if (typeof window !== "undefined" && window.matchMedia) {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  return "dark";
+};
+
+const Navbar = () => {
+  // Default dark mode
+  const [theme, setTheme] = useState<"dark" | "light">(() => getSystemTheme());
+
+  useEffect(() => {
+    document.documentElement.classList.remove("dark", "light");
+    document.documentElement.classList.add(theme);
+    // Persist theme
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  useEffect(() => {
+    // On mount, check for saved user theme or system
+    const saved = localStorage.getItem("theme");
+    setTheme(saved === "light" || saved === "dark" ? saved : getSystemTheme());
+  }, []);
+
+  // Toggle theme function
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+
+  return (
+    <nav className="w-full sticky top-0 z-30 bg-background/80 border-b flex items-center justify-between px-12 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+      <div className="text-2xl font-playfair tracking-tight">Sai Tiger Raina</div>
+      <div className="flex gap-7 items-center">
+        {NAV_ITEMS.map(item => (
+          <a key={item.label} href={item.href} className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5">
+            {item.label}
+          </a>
+        ))}
+        <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <Github className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
+        </a>
+        <a href="https://www.linkedin.com/in/saitigerraina/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <Linkedin className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
+        </a>
+        <a href="https://sairaina.substack.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack">
+          <SubstackIcon className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
+        </a>
+        <button
+          type="button"
+          aria-label="Toggle dark mode"
+          className="ml-2 focus:outline-none focus-visible:ring"
+          onClick={toggleTheme}
+        >
+          <Switch
+            checked={theme === "dark"}
+            onCheckedChange={toggleTheme}
+            className="align-middle"
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {/* Hide the icon inside, just render next to switch */}
+          </Switch>
+          <span className="sr-only">{theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}</span>
+          {theme === "dark" ? (
+            <Moon className="inline ml-2 w-4 h-4 text-primary align-middle" />
+          ) : (
+            <Sun className="inline ml-2 w-4 h-4 text-primary align-middle" />
+          )}
+        </button>
+      </div>
+    </nav>
+  );
+};
+
 export default Navbar;
