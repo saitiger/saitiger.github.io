@@ -26,11 +26,13 @@ const TechnicalSkillsSection = () => (
           <HoverCard key={skill.name}>
             <HoverCardTrigger asChild>
               <div className="flex flex-col items-center cursor-pointer group">
-                <img 
-                  src={skill.logo} 
-                  alt={skill.name}
-                  className="w-12 h-12 rounded-lg object-contain group-hover:opacity-80 transition-opacity"
-                />
+                <div className="bg-white p-3 rounded-lg shadow-sm group-hover:shadow-md transition-shadow">
+                  <img 
+                    src={skill.logo} 
+                    alt={skill.name}
+                    className="w-12 h-12 object-contain group-hover:opacity-80 transition-opacity"
+                  />
+                </div>
               </div>
             </HoverCardTrigger>
             <HoverCardContent className="text-center">{skill.name}</HoverCardContent>
