@@ -4,19 +4,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const EDUCATION = [
   {
-    degree: "Master of Science, Applied Data Science",
+    degree: "Masters in Applied Data Science",
     university: "University of Southern California",
-    dates: "Aug 2022 – May 2024",
     details: [
-      "GPA: 3.8/4.0",
-      "Relevant Coursework: Machine Learning, Data Mining, Natural Language Processing, Deep Learning.",
+      "Relevant Coursework: Machine Learning for Data Science, Data Mining, Research Methods and Analysis for User Studies, User Experience Design and Strategy.",
     ],
   },
   {
-    degree: "Bachelor of Technology, Computer Science",
-    university: "XYZ University",
-    dates: "Aug 2018 – May 2022",
-    details: ["GPA: 3.9/4.0", "Graduated with honors."],
+    degree: "Bachelors in Computer Science",
+    university: "GGSIPU, New Delhi, India",
+    details: [],
   },
 ];
 
@@ -36,15 +33,16 @@ const EducationSection = () => (
                 <p className="text-muted-foreground font-medium pt-1">
                   {edu.university}
                 </p>
-                <p className="text-sm text-muted-foreground">{edu.dates}</p>
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                {edu.details.map((detail, i) => (
-                  <li key={i}>{detail}</li>
-                ))}
-              </ul>
+              {edu.details.length > 0 && (
+                <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                  {edu.details.map((detail, i) => (
+                    <li key={i}>{detail}</li>
+                  ))}
+                </ul>
+              )}
             </CardContent>
           </Card>
         ))}
