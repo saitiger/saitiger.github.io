@@ -1,4 +1,3 @@
-
 import { Projector, Link as LinkIcon } from "lucide-react";
 import {
   Accordion,
@@ -80,17 +79,14 @@ const HackathonsSection = () => (
             className="bg-card border border-border rounded-lg shadow-sm hover:shadow-lg transition-shadow border-b-0"
           >
             <AccordionTrigger className="p-6 text-left hover:no-underline">
-              <div className="flex gap-6 items-start w-full">
-                <Projector className="w-10 h-10 text-primary flex-shrink-0 mt-1" />
-                <div className="flex flex-col gap-1 text-left">
-                  <span className="text-lg font-semibold">{hack.name}</span>
-                  <div className="text-sm text-muted-foreground font-medium">{hack.outcome}</div>
-                  <p className="text-base text-muted-foreground mt-2">{hack.summary}</p>
-                </div>
+              <div className="flex flex-col gap-1 text-left w-full">
+                <span className="text-lg font-semibold">{hack.name}</span>
+                <div className="text-sm text-muted-foreground font-medium">{hack.outcome}</div>
+                <p className="text-base text-muted-foreground mt-2">{hack.summary}</p>
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6 pt-0">
-              <div className="pl-[64px]">
+              <div>
                 {hack.details.length > 0 && (
                   <ul className="list-disc pl-5 space-y-2 text-muted-foreground mb-4">
                     {hack.details.map((detail, i) => (
