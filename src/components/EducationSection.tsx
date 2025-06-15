@@ -4,16 +4,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const EDUCATION = [
   {
-    degree: "Masters in Applied Data Science",
+    degree: "Master of Science in Applied Data Science",
     university: "University of Southern California",
     details: [
       "Relevant Coursework: Machine Learning for Data Science, Data Mining, Research Methods and Analysis for User Studies, User Experience Design and Strategy.",
     ],
   },
   {
-    degree: "Bachelors in Computer Science",
+    degree: "Bachelor of Technology in Computer Science and Engineering",
     university: "GGSIPU, New Delhi, India",
-    details: [],
+    details: [
+      "Relevant Coursework: Database Design, Machine Learning, Operating Systems, Object Oriented Programming",
+    ],
   },
 ];
 
@@ -52,3 +54,4 @@ const EducationSection = () => (
 );
 
 export default EducationSection;
+
