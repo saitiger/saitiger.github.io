@@ -1,4 +1,5 @@
-import { Projector, Link as LinkIcon } from "lucide-react";
+
+import { Link as LinkIcon } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -49,9 +50,10 @@ const HACKATHONS = [
   {
     name: "Min Family Challenge",
     outcome: "🏅 Top 5 Finalist (out of 100+ teams)",
-    summary: "Participated in a highly competitive innovation challenge focused on family well-being.",
+    summary: "Reached the finals (top 5 teams among 100+ teams). Min Family Challenge is a $50,000 social entrepreneurship challenge.",
     details: [],
     links: [
+      { name: "Competition", url: "https://viterbiinnovation.usc.edu/competitions-and-programs/mfc/" },
       { name: "Video", url: "https://www.youtube.com/watch?v=XKZfvOl_mBw" }
     ]
   },
@@ -79,14 +81,31 @@ const HackathonsSection = () => (
             className="bg-card border border-border rounded-lg shadow-sm hover:shadow-lg transition-shadow border-b-0"
           >
             <AccordionTrigger className="p-6 text-left hover:no-underline">
-              <div className="flex flex-col gap-1 text-left w-full">
-                <span className="text-lg font-semibold">{hack.name}</span>
-                <div className="text-sm text-muted-foreground font-medium">{hack.outcome}</div>
-                <p className="text-base text-muted-foreground mt-2">{hack.summary}</p>
+              <div className="flex flex-col gap-3 text-left w-full">
+                <div className="flex flex-col gap-1">
+                  <span className="text-lg font-semibold">{hack.name}</span>
+                  <div className="text-sm text-muted-foreground font-medium">{hack.outcome}</div>
+                </div>
+                {/* Show GitHub link in collapsed state */}
+                <div className="flex flex-wrap gap-x-4 gap-y-2" onClick={(e) => e.stopPropagation()}>
+                  {hack.links.filter(link => link.name === "GitHub").map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-primary underline-offset-4 hover:underline text-sm font-medium"
+                    >
+                      <LinkIcon className="w-3.5 h-3.5" />
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6 pt-0">
               <div>
+                <p className="text-base text-muted-foreground mb-4">{hack.summary}</p>
                 {hack.details.length > 0 && (
                   <ul className="list-disc pl-5 space-y-2 text-muted-foreground mb-4">
                     {hack.details.map((detail, i) => (
