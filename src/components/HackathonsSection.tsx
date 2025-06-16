@@ -63,6 +63,7 @@ const HACKATHONS = [
     summary: "Developed Saathi.AI, an innovative AI-powered companion.",
     details: [],
     links: [
+      { name: "GitHub", url: "https://github.com/saitiger/Saathi.AI" },
       { name: "Presentation", url: "https://pitch.com/v/saathiai-qmaery" },
       { name: "Video", url: "https://www.youtube.com/watch?v=9vqTooqTjwU" }
     ]
