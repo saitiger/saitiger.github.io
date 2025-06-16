@@ -1,16 +1,34 @@
 
 const LEADERSHIP = [
   {
-    title: "President, Data Science Club",
-    org: "University of XYZ",
-    dates: "2023 – Present",
-    description: "Led a 40+ member student club, organizing workshops and speaker sessions to promote data science awareness."
+    title: "Contributor",
+    org: "DeepML (Leetcode for Machine Learning)",
+    dates: "",
+    description: "Contributed to the platform by adding questions, solutions, and creating new challenges"
   },
   {
-    title: "Volunteer Data Analyst",
-    org: "Open Health Initiative",
-    dates: "2022 – 2023",
-    description: "Provided analytics support for a non-profit; built dashboards on healthcare program reach."
+    title: "Vice President",
+    org: "USC HSO",
+    dates: "",
+    description: "Led executive board meetings, provided guidance on sponsorship negotiations, and oversaw budget management. Managed a team of 15 to organize large-scale events, balancing multiple priorities while maintaining quality standards."
+  },
+  {
+    title: "Social Chair",
+    org: "USC HSO",
+    dates: "",
+    description: "Developed and executed social media strategies to enhance the organization's online presence and increase alumni engagement"
+  },
+  {
+    title: "Student Partner",
+    org: "Internshala",
+    dates: "",
+    description: "Represented Internshala in college as a campus ambassador and helped peers make the best use of Internshala as a platform for getting internships and training. Core responsibilities included inculcating internship culture and hosting activities like workshops and seminars to build relationships with students and faculty."
+  },
+  {
+    title: "Student Volunteer",
+    org: "National Service Scheme",
+    dates: "",
+    description: "Volunteered for spreading awareness among people about cleanliness under the Swachh Bharat Scheme introduced by the government of India."
   }
 ];
 
