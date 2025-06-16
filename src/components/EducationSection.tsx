@@ -14,7 +14,7 @@ const EDUCATION = [
     degree: "Bachelor of Technology in Computer Science and Engineering",
     university: "GGSIPU, New Delhi, India",
     details: [
-      "Relevant Coursework: Database Design, Machine Learning, Operating Systems, Object Oriented Programming",
+      "Relevant Coursework: Database Design, Machine Learning, Operating Systems, Object Oriented Programming, Data Structure, Computer Networks, Data Mining and Business Intelligence",
     ],
   },
 ];
