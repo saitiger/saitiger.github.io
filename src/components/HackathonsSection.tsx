@@ -37,7 +37,7 @@ const HACKATHONS = [
   },
   {
     name: "Viterbi - Greif Sustainability Innovation Challenge",
-    outcome: "🏆 'Biggest Swing' Award & $1000 Prize",
+    outcome: "🏆 'Biggest Swing' Award & $1000 Cash Prize",
     summary: "Developed a conversational bot for Life Cycle Analysis of products.",
     details: [
       "Built PowerBI dashboards to identify material trading locations and track manufacturing emissions.",
