@@ -21,7 +21,7 @@ const HACKATHONS = [
   },
     {
     name: "GRIDS Mindspark 2.0",
-    outcome: "🏆 1st Place & Featured on KNIME Blog",
+    outcome: "🏆 1st Place & Featured on KNIME Blog & $1000 Cash Prize",
     summary: "Developed a platform for matching PhD students with professors using research interests.",
     details: [
       "Scraped academic directories and websites for research data.",
@@ -37,7 +37,7 @@ const HACKATHONS = [
   },
   {
     name: "Viterbi - Greif Sustainability Innovation Challenge",
-    outcome: "🏆 'Biggest Swing' Award & $1000 Cash Prize",
+    outcome: "🏆 'Biggest Swing' Award & $1000 Prize",
     summary: "Developed a conversational bot for Life Cycle Analysis of products.",
     details: [
       "Built PowerBI dashboards to identify material trading locations and track manufacturing emissions.",
