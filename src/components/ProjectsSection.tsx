@@ -22,7 +22,7 @@ const PROJECTS = [
     ],
     github: "https://github.com/saitiger/Tummy-Time",
     details: (
-      <>
+      <div>
         <p>Assisted a PhD student at the Motor Development Lab in conducting statistical analysis, debugging sensors, and analyzing the data.<br/>
         Created a streamlit app to analyze data from the GENEActiv sensor.<br/>
         Conducted analysis of the data for configuring the sensor and the toy.<br/>
@@ -30,8 +30,9 @@ const PROJECTS = [
         A quick introduction to Tummy Time using NotebookLM.</p>
         <div className="flex flex-wrap gap-4 mt-4">
           <a href="https://github.com/saitiger/Tummy-Time" className="text-primary underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://notebooklm.google.com/notebook/0c19ec43-2477-47ee-ad04-92566277c8b5/audio?pli=1" className="text-primary underline" target="_blank" rel="noopener noreferrer">NotebookLM</a>
         </div>
-      </>
+      </div>
     ),
   },
   {
