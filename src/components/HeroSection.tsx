@@ -20,7 +20,7 @@ const HeroSection = () => (
       <img
         alt="Profile"
         className="w-56 h-56 rounded-full object-cover border-4 border-primary/30 shadow-lg"
-        src="/images/profile.png"
+        src="./images/profile.png"
       />
     </div>
   </section>
