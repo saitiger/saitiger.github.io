@@ -9,7 +9,7 @@ import {
 const PROJECTS = [
   {
     title: "Tummy Time",
-    short: "Streamlit app and deep learning for posture detection with GENEActiv sensor data.",
+    short: "Webapp development using Streamlit, adhoc analysis using Python and hypothesis testing for sensor data.",
     tags: [
       "Streamlit",
       "Docker",
@@ -73,7 +73,7 @@ const PROJECTS = [
   },
   {
     title: "Recommender System for Yelp Dataset",
-    short: "Hybrid recommender system with collaborative filtering and XGBoost for Yelp data.",
+    short: "Hybrid recommender system using XGBoost & PySpark on restaurants data from Yelp.",
     tags: ["Pyspark", "Recommendation Systems", "XgBoost"],
     github: "https://github.com/saitiger/Recommender-System-Yelp",
     details: (
@@ -99,6 +99,7 @@ const PROJECTS = [
         Conducted ad-hoc analysis using BigQuery on a cloud data warehouse containing over 500,000 rows.</p>
         <div className="flex flex-wrap gap-4 mt-4">
           <a href="https://github.com/saitiger/Emulated-Data-File-System" className="text-primary underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.youtube.com/watch?v=C9lxvqlx-7g&ab_channel=SaiRaina" className="text-primary underline" target="_blank" rel="noopener noreferrer">Video Presentation</a>
         </div>
       </>
     ),
@@ -124,7 +125,7 @@ const PROJECTS = [
     title: "Data Science Job Dashboard",
     short: "PowerBI dashboard analyzing data science industry trends from survey data.",
     tags: ["PowerBI", "Survey Analysis", "Data Science"],
-    github: null,
+    github: "https://github.com/saitiger/PowerBI/tree/main/Data%20Science%20Survey",
     details: (
       <>
         <p>Inspired by Alex the analyst, used the data science survey data to analyze the industry trends for data-based roles (Data Science, Data Analyst, Data Engineer).<br/>
@@ -153,7 +154,7 @@ const PROJECTS = [
   },
   {
     title: "Viterbi Vision",
-    short: "User research, Figma prototype, and business model for a product-market fit study.",
+    short: "Market research, user interviews & research, Figma prototype and business model for product market fit study.",
     tags: ["Figma", "User Research", "Customer Discovery", "A/B Testing", "Hypothesis Testing", "Business Model"],
     github: null,
     details: (
