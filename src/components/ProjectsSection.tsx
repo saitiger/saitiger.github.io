@@ -1,3 +1,4 @@
+import { Code } from "lucide-react";
 
 const PROJECTS = [
   {
