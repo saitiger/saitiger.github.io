@@ -1,8 +1,7 @@
-
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const SKILLS = [
-  { name: "Python", logo: "/lovable-uploads/1edf1431-14b9-4c56-b9c4-255fc40a2d27.png" },
+  { name: "Python", logo: "/images/python-logo.png" },
   { name: "Postgres", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
   { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   { name: "Redis", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
