@@ -1,10 +1,11 @@
+
 const WORK = [
   {
     company: "Vosyn",
     positions: [
       {
         position: "Team Lead, Vosyn Core",
-        dates: "Mar 2025 - Present",
+        dates: "Jun 2025 - Present",
         description: [
           "Collaborated with the product team to define roadmaps, prioritizing features based on customer feedback and market analysis.",
           "Oversaw the development of the audio, video, and text pipeline",
