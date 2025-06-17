@@ -1,6 +1,4 @@
 
-import { Code } from "lucide-react";
-
 const PROJECTS = [
   {
     title: "Predictive Analytics Platform",
@@ -26,14 +24,14 @@ const PROJECTS = [
 ];
 
 const ProjectsSection = () => (
-  <section id="projects" className="py-24 bg-muted/40">
+  <section id="projects" className="py-24 bg-background">
     <div className="max-w-7xl mx-auto px-4">
       <h2 className="font-playfair text-3xl mb-8 text-center text-primary">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROJECTS.map((project) => (
           <div
             key={project.title}
-            className="bg-background rounded-xl shadow-md border border-border p-7 flex flex-col gap-3 hover:shadow-lg transition group"
+            className="bg-card rounded-xl shadow-md border border-border p-7 flex flex-col gap-3 hover:shadow-lg transition group"
           >
             <div className="flex items-center gap-3 mb-2">
               <Code className="w-6 h-6 text-primary" />

@@ -18,7 +18,7 @@ const SKILLS = [
 ];
 
 const TechnicalSkillsSection = () => (
-  <section id="skills" className="py-16 bg-muted/40">
+  <section id="skills" className="py-16 bg-background">
     <div className="max-w-6xl mx-auto px-4">
       <h2 className="font-playfair text-3xl mb-8 text-primary text-center">Technical Skills</h2>
       <div className="flex flex-wrap justify-center gap-8">

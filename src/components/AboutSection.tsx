@@ -1,4 +1,5 @@
-const AboutSection = () => <section id="about" className="py-24 bg-background">
+
+const AboutSection = () => <section id="about" className="py-24 bg-muted/40">
     <div className="max-w-7xl mx-auto px-4">
       <h2 className="font-playfair text-3xl mb-12 text-center text-primary">About Me</h2>
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -10,12 +11,12 @@ const AboutSection = () => <section id="about" className="py-24 bg-background">
             Growing up watching cricket, I was always curious about the people behind the laptop screens : What exactly were they doing? How are they helping the team ? 
             That curiosity sparked a lifelong fascination with how data can tell stories and drive decisions.
           </p>
-          <p className="text-xl mb-6 font-normal">Since then, I’ve worked across industries building models and ETL pipelines, improving marketing ROI by 30%, crafting real-time dashboards, and more, all in service of helping teams move faster and make smarter decisions.</p>
+          <p className="text-xl mb-6 font-normal">Since then, I've worked across industries building models and ETL pipelines, improving marketing ROI by 30%, crafting real-time dashboards, and more, all in service of helping teams move faster and make smarter decisions.</p>
           <p className="text-lg mb-6">
             At my core, I humanize data through storytelling and practical solutions.
           </p>
           <p className="text-lg mb-6">
-            Outside of work, I’m usually reading about startups, exploring business strategy, or building side projects that solve my own everyday problems. There’s something therapeutic about turning a weekend frustration into a working app. When I’m not coding, you’ll find me hiking or watching sports.
+            Outside of work, I'm usually reading about startups, exploring business strategy, or building side projects that solve my own everyday problems. There's something therapeutic about turning a weekend frustration into a working app. When I'm not coding, you'll find me hiking or watching sports.
           </p>
           <p className="text-lg">
             P.S. This means watching classics when nothing's live!

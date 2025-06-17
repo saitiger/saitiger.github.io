@@ -33,7 +33,7 @@ const LEADERSHIP = [
 ];
 
 const LeadershipSection = () => (
-  <section id="leadership" className="py-16">
+  <section id="leadership" className="py-16 bg-muted/40">
     <div className="max-w-6xl mx-auto px-4">
       <h2 className="font-playfair text-3xl mb-8 text-primary text-center">Leadership & Volunteer Experience</h2>
       <div className="flex flex-col gap-7">

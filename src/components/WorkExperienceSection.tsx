@@ -1,4 +1,3 @@
-
 const WORK = [
   {
     company: "Vosyn",
@@ -81,7 +80,6 @@ const WorkExperienceSection = () => (
       <ol className="relative border-l-2 border-primary/50 pl-7 space-y-8">
         {WORK.map((company) => (
           <li key={company.company} className="mb-0">
-            <div className="absolute -left-3 top-2 bg-primary rounded-full w-2 h-2"></div>
             <div className="bg-card rounded-md border border-border px-5 py-4 shadow-md hover:shadow-lg transition">
               <div className="space-y-4">
                 {company.positions.map((position, index) => (
