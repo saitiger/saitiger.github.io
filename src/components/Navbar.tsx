@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
-  { label: "About", href: "/#about" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Hackathons", href: "/#hackathons" },
-  { label: "Work Experience", href: "/#work" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -51,27 +47,14 @@ const Navbar = () => {
         Sai Tiger Raina
       </Link>
       <div className="flex gap-7 items-center">
-        {NAV_ITEMS.map(item =>
-          item.label === "Contact" ? (
-            <Link
-              to="/contact"
-              key={item.label}
-              className={`transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5 ${
-                location.pathname === "/contact" ? "text-primary" : ""
-              }`}
-            >
-              {item.label}
-            </Link>
-          ) : (
-            <a
-              href={item.href}
-              key={item.label}
-              className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5"
-            >
-              {item.label}
-            </a>
-          )
-        )}
+        <Link
+          to="/contact"
+          className={`transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5 ${
+            location.pathname === "/contact" ? "text-primary" : ""
+          }`}
+        >
+          Contact
+        </Link>
         <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <Github className="w-5 h-5 hover:scale-110 transition-transform text-muted-foreground hover:text-primary" />
         </a>
