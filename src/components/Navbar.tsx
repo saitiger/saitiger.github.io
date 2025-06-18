@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, LampCeiling, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -64,13 +63,13 @@ const Navbar = () => {
               {item.label}
             </Link>
           ) : (
-            <Link
-              to={`/${item.href}`}
+            <a
+              href={item.href}
               key={item.label}
               className="transition-colors text-md font-medium text-muted-foreground hover:text-primary px-1 py-0.5"
             >
               {item.label}
-            </Link>
+            </a>
           )
         )}
         <a href="https://github.com/saitiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
