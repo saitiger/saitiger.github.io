@@ -10,7 +10,7 @@ const WORK = [
           "Collaborated with the product team to define roadmaps, prioritizing features based on customer feedback and market analysis.",
           "Oversaw the development of the audio, video, and text pipeline",
           "Performed prompt engineering for the Llama-powered Cloud-Run function",
-          "Coordinated with multiple stakeholders, including IT teams, Finance, and Business Development, to address bottlenecks, ensuring alignment with business objectives and delivering actionable insights."
+          "Coordinated with multiple stakeholders, including IT teams, Finance, and Business Development, to address bottlenecks, ensuring alignment with business objectives and delivering actionable insights"
         ]
       },
       {
@@ -51,7 +51,7 @@ const WORK = [
           "Oversaw all marketing channels within the global medicine program, leveraging data insights to drive strategic decisions",
           "Analyzed user behavior and demographic information for detailed targeting to reduce cost per lead by 17% and boost impressions by 36%",
           "Increased conversions by 42% by redesigning digital marketing strategies through optimized A/B testing, keyword research",
-          "Recognized growth opportunities by analyzing website data, comprising of over 100k visits per month via SQL queries and hypothesis testing methods (t-tests and ANOVA)",
+          "Recognized growth opportunities by analyzing website data, comprising of over 100k visits per month via SQL queries and hypothesis testing methods",
           "Handled system updates, reconfigurations, troubleshooting, and maintenance to ensure data accuracy and operational efficiency"
         ]
       }

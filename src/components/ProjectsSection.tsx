@@ -1,4 +1,4 @@
-import { Code, Github } from "lucide-react";
+import { Github, ChevronDown } from "lucide-react";
 import {
   Accordion,
   AccordionItem,
@@ -183,9 +183,8 @@ const ProjectsSection = () => (
       <Accordion type="multiple" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROJECTS.map((project) => (
           <AccordionItem value={project.title} key={project.title} className="bg-card rounded-xl shadow-md border border-border p-0 flex flex-col hover:shadow-lg transition group">
-            <AccordionTrigger className="p-7 flex flex-col gap-3 text-left">
+            <AccordionTrigger className="p-7 flex flex-col gap-3 text-left h-full">
               <div className="flex items-center gap-3 mb-2">
-                <Code className="w-6 h-6 text-primary" />
                 <span className="font-semibold text-lg">{project.title}</span>
               </div>
               <div className="text-muted-foreground text-base mb-3">{project.short}</div>
@@ -199,6 +198,10 @@ const ProjectsSection = () => (
                   </span>
                 ))}
               </div>
+
+              {/* Spacer to push the link and icon to the bottom */}
+              <div className="flex-grow"></div>
+
               {project.github && (
                 <a
                   href={project.github}
@@ -210,6 +213,12 @@ const ProjectsSection = () => (
                   <Github className="w-4 h-4" /> GitHub
                 </a>
               )}
+
+              {/* Centered Chevron Icon for expand/collapse indicator */}
+              <div className="w-full flex justify-center pt-4">
+                <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </div>
+              
             </AccordionTrigger>
             <AccordionContent className="px-7 pb-7">{project.details}</AccordionContent>
           </AccordionItem>
