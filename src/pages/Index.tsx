@@ -1,5 +1,5 @@
-
 import Navbar from "@/components/Navbar";
+import VideoHeroSection from "@/components/VideoHeroSection";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -15,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background flex flex-col items-center w-full">
       <Navbar />
       <main className="flex-1 w-full flex flex-col items-stretch">
+        <VideoHeroSection />
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
