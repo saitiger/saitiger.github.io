@@ -1,0 +1,12 @@
+# Sai Tiger Raina Portfolio
+
+## Summary
+Personal portfolio for Sai Tiger Raina with work experience, projects, skills, education, and contact details.
+
+## Preferred Format
+- index.md
+
+## Content
+- ./
+- index.md
+- contact.md
