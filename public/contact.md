@@ -10,4 +10,4 @@ I'm currently exploring exciting opportunities and always open to connecting wit
 - GitHub: https://github.com/saitiger
 
 ## Contact Form
-- Web form: /contact
+- Web form: /#/contact
