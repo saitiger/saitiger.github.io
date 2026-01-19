@@ -73,7 +73,7 @@ const HACKATHONS = [
 const HackathonsSection = () => (
   <section id="hackathons" className="py-20 bg-muted/40">
     <div className="max-w-6xl mx-auto px-4">
-      <h2 className="font-playfair text-3xl mb-8 text-primary text-center">Hackathon Experience</h2>
+      <h2 className="font-playfair text-3xl mb-8 text-primary text-center">Hackathons</h2>
       <Accordion type="multiple" className="w-full space-y-4">
         {HACKATHONS.map((hack, index) => (
           <AccordionItem

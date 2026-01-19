@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import VideoHeroSection from "@/components/VideoHeroSection";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import HackathonsSection from "@/components/HackathonsSection";
 import WorkExperienceSection from "@/components/WorkExperienceSection";
@@ -17,12 +16,11 @@ const Index = () => {
       <main className="flex-1 w-full flex flex-col items-stretch">
         <VideoHeroSection />
         <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
         <WorkExperienceSection />
-        <EducationSection />
-        <HackathonsSection />
+        <ProjectsSection />
         <TechnicalSkillsSection />
+        <HackathonsSection />
+        <EducationSection />
         <LeadershipSection />
       </main>
       <Footer />

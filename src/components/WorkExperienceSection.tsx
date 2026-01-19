@@ -4,17 +4,18 @@ const WORK = [
     company: "Vosyn",
     positions: [
       {
-        position: "Team Lead, Vosyn Core",
+        position: "Product Lead, Vosyn Core",
         dates: "Jun 2025 - Present",
         description: [
-          "Collaborated with the product team to define roadmaps, prioritizing features based on customer feedback and market analysis.",
-          "Oversaw the development of the audio, video, and text pipeline",
-          "Performed prompt engineering for the Llama-powered Cloud-Run function",
-          "Coordinated with multiple stakeholders, including IT teams, Finance, and Business Development, to address bottlenecks, ensuring alignment with business objectives and delivering actionable insights"
+          "Designing and implementing sub-second, low-latency multimodal AI pipelines (audio, video, text), optimizing system architecture for production-scale performance, scalability, and large analysis loops.",
+          "Heading product vision and roadmap, translating user interviews, usage metrics, and feedback loops into prioritized features that drive adoption and improve user experience (+18% retention).",
+          "Developing and deploying internal AI agents using n8n and fine-tuned open-source models, automating workflows and materially reducing manual operational effort across product teams.",
+          "Leading multimodal AI evaluations and benchmarking, identifying capability gaps and guiding iterative improvements across models, prompts, and system architecture.",
+          "Designing scalable data schemas, storage patterns, and telemetry pipelines across cloud services, enabling end-to-end observability, traceability, and system reliability."
         ]
       },
       {
-        position: "Machine Learning Engineer",
+        position: "Data Scientist",
         dates: "Mar 2025 - Present",
         description: [
           "Designed and deployed scalable data extraction and cleaning pipelines using containerized microservices",
@@ -32,11 +33,11 @@ const WORK = [
         position: "Research Assistant",
         dates: "Jan 2024 - Feb 2025",
         description: [
-          "Worked under Dr. Benjamin Nye on the topic - Finer Bad Writing: Evaluating LLM Fine-Tuning with LLM-Generated Errors",
-          "Developed an AI assistant that gives personalized feedback on academic essays",
-          "Conducted prompt engineering to evaluate and score issues in college essays, ensuring high-quality, targeted feedback",
-          "Helped fine-tune GPT-3.5, GPT-4, and LLaMA2-7B to improve thesis support and vagueness issues in academic writing. Focussed on baseline analysis and auto-evaluation methods",
-          "Won 'Best Data Science Insight' at Datafirst 2024 for outstanding project contributions"
+          "Conducted research under Dr. Benjamin Nye on Finer Bad Writing: Evaluating LLM Fine-Tuning with LLM-Generated Errors, focused on diagnosing and improving weaknesses in academic writing.",
+          "Developed an AI assistant for personalized feedback on college essays, delivering targeted critiques on thesis clarity, argument support, and vagueness.",
+          "Designed and executed prompt-engineering frameworks to systematically evaluate, score, and categorize writing issues, ensuring high-quality and actionable feedback.",
+          "Fine-tuned and evaluated GPT-3.5, GPT-4, and LLaMA2-7B, emphasizing baseline analysis and automated evaluation methods to improve thesis support and reduce vague reasoning.",
+          "Awarded \"Best Data Science Insight\" at Datafirst 2024 for outstanding research insights and technical contributions."
         ]
       }
     ]
